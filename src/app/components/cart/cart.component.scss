@@ -1,0 +1,191 @@
+.content {
+    margin-top: 80px;
+
+    .main-title {
+        margin-bottom: 80px;
+
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: #1D1F22;
+            margin-bottom: 55px;
+        }
+    }
+
+    .cart-list {
+
+        .cart-item {
+
+            margin-bottom: 32px;
+           
+            .col-md-6 {
+
+                .details {
+                    .name {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 30px;
+                        line-height: 27px;
+                        color: #1D1F22;
+                        margin-bottom: 20px;
+                    }
+            
+                    .size {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        margin-bottom: 20px;
+                        cursor: pointer;
+            
+                        .size- {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 18px;
+                            letter-spacing: 0.05em;
+                            color: #1D1F22;
+                            padding: 15px;
+                            border: 1px solid black;
+                            margin-right: 12px;
+                        }
+                    }
+            
+                    .color {
+                        margin-bottom: 36px;
+            
+                        .colors {
+                            padding: 2px;
+                            display: flex;
+            
+                            .color- {
+                                width: 36px;
+                                height: 36px;
+                                margin-right: 8px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+            
+                    .price {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 20px;
+            
+                        .price- {
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 24px;
+                            line-height: 32px;
+                            color: #1D1F22;
+                        }
+                    }
+                }
+
+                .img-quan {
+                    display: flex;
+                    // align-items: center;
+
+                    .quan {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .plus,.minus {
+                            cursor: pointer;
+                            transition: all 0.2s ease-in-out;
+
+                            &:active {
+                                transform: scale(0.5);
+                            }
+                        }
+
+                        .quantity span {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 24px;
+                            line-height: 160%;
+                            color: #1D1F22;
+                        }
+                    }
+
+                    .img {
+                        width: 200px;
+                        height: 288px;
+                        margin-left: 24px;
+
+                        img {
+                            width: inherit;
+                            height: inherit;
+                        }
+                    }
+                }
+            }
+
+            .mani {
+                // width: fit-content;
+                margin-right: -10%;
+            }
+        }
+    }
+}
+
+.row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #1D1F22;
+    margin-bottom: 8px;
+}
+
+.tax,.quantity-sum,.total {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.summ-title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1D1F22;
+}
+
+.summ-value {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #1D1F22;
+}
+
+.btn {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background: #5ECE7B;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    padding: 16px 90px;
+    color: #FFFFFF;
+}
+
+.no-cart-item {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #1D1F22;
+}

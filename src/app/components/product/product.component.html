@@ -1,0 +1,14 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let product of products">
+            <img class="cart" (click)="handleActionToEmit(product, 'addToCart')" src="assets/icons/cart_hover.png" alt="">
+            <div class="product" (click)="handleActionToEmit(product, 'view')">
+                <img class="product-img" [src]="product.img" alt="">
+                <div class="text">
+                    <span class="name">{{product.name}}</span>
+                    <span class="price">${{product.price}}.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

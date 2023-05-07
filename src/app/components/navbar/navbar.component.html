@@ -1,0 +1,31 @@
+<div class="nav-bar">
+    <div class="links">
+        <ul class="link-items">
+            <li class="link">WOMEN</li>
+            <li class="link">MEN</li>
+            <li class="link">KIDS</li>
+        </ul>
+    </div>
+
+    <div class="logo">
+        <img src="assets/icons/bag.png" alt="">
+    </div>
+
+    <div class="currency-cart">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                $
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">&dollar; USD</a>
+                <a class="dropdown-item" href="#">&euro; EUR</a>
+                <a class="dropdown-item" href="#">&yen; JPY</a>
+            </div>
+        </div>
+        <div class="cart" routerLink="/cart">
+            <img src="assets/icons/cart.png" alt="">
+            <span class="badge badge-dark" *ngIf="cartCount > 0">{{cartCount}}</span>
+        </div>
+    </div>
+</div>

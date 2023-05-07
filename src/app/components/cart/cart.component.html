@@ -1,0 +1,83 @@
+<div class="content">
+    <div class="main-title">
+        <h1>CART</h1>
+    </div>
+
+    <div class="no-cart-item" *ngIf="cartItems.length == 0">
+        <p>No item in the cart, Go to products to add items</p>
+    </div>
+
+    <div class="cart-list" *ngIf="cartItems.length > 0">
+        <div class="cart-item" *ngFor="let item of cartItems">
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="details">
+                        <p class="name">{{item?.name}}</p>
+
+
+                        <div class="price">
+                            <span class="price-">${{item?.price}}.00</span>
+                        </div>
+                    
+                        <div class="size">
+                            <span class="title">SIZE:</span>
+                            <div class="sizes">
+                                <span class="size-" *ngFor="let size of item?.sizes">{{size}}</span>
+                            </div>
+                        </div>
+                    
+                        <div class="color">
+                            <span class="title">Color:</span>
+                            <div class="colors">
+                                <div *ngFor="let color of item?.colors" class="color-" [ngStyle]="{'background': color}"></div>
+                            </div>
+                        </div>
+                                            
+                    </div>
+                </div>
+                <div class="col-md-6 mani">
+                    <div class="img-quan">
+                        <div class="quan">
+                            <div class="plus">
+                                <img (click)="increament(item)" src="assets/icons/plus.png" alt="">
+                            </div>
+
+                            <div class="quantity">
+                                <span>{{item.quantity}}</span>
+                            </div>
+
+                            <div class="minus">
+                                <img (click)="decreament(item)" src="assets/icons/minus.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="img">
+                            <img [src]="item.img" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="summary" *ngIf="cartItems.length > 0">
+            <div class="tax">
+                <span class="summ-title">Tax 21%: </span>
+                <span class="summ-value">${{tax}}</span>
+            </div>
+
+            <div class="quantity-sum">
+                <span class="summ-title">Quantity: </span>
+                <span class="summ-value">{{quantity}}</span>
+            </div>
+
+            <div class="total">
+                <span class="summ-title">Total: </span>
+                <span class="summ-value">${{total}}</span>
+            </div>
+
+            <button class="btn">ORDER</button>
+        </div>
+    </div>
+</div>
