@@ -16,6 +16,8 @@ export class CartOverlayComponent implements OnInit {
   total: number = 0
   cartCount!: number
 
+  ref = `${Math.ceil(Math.random() * 10e10)}`
+
   ngOnInit(): void {
     this.getCartItems()
   }
@@ -29,8 +31,22 @@ export class CartOverlayComponent implements OnInit {
       
       let totalForEach = item.quantity * item.price
       this.total = this.total + totalForEach
-
+      console.log(this.total)
     })
+  }
+
+  paymentInit() {
+    console.log('Payment Initialized')
+  }
+
+  paymentDone(ref: any) {
+    console.log('Payment Successful', ref)
+    this.cartItems = []
+    alert('Payment successful')
+  }
+
+  paymentCanceled() {
+    console.log('Payment Failed')
   }
 
   selectSize(size: string, product: ICart) {

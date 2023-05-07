@@ -70,7 +70,17 @@
 
             <div class="btns">
                 <button routerLink="/cart" class="btn outline-btn">VIEW BAG</button>
-                <button class="btn filled-btn">CHECK OUT</button>
+                <button
+                    angular4-paystack
+                    [amount]="total * 100 * 700"
+                    [email]="'chibuikeonwugharam@gmail.com'"
+                    [ref]="ref"
+                    (paymentInit)="paymentInit()"
+                    (close)="paymentCanceled()"
+                    (callback)="paymentDone($event)"
+                    class="btn filled-btn">
+                    CHECK OUT
+                </button>
             </div>
         </div>
     </div>
