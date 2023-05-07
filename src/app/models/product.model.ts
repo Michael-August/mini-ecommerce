@@ -7,4 +7,6 @@ export interface IProduct {
     colors: string[];
     description: string;
     thumbnails: string[]
+    selectedSize: string
+    selectedColor: string
 }

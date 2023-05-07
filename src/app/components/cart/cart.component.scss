@@ -1,5 +1,5 @@
 .content {
-    margin-top: 80px;
+    margin-top: 160px;
 
     .main-title {
         margin-bottom: 80px;
@@ -50,6 +50,12 @@
                             padding: 15px;
                             border: 1px solid black;
                             margin-right: 12px;
+                            transition: all 0.4s ease-out;
+                            
+                            &:hover {
+                                background-color: black;
+                                color: #FFFFFF;
+                            }
                         }
                     }
             
@@ -65,6 +71,11 @@
                                 height: 36px;
                                 margin-right: 8px;
                                 cursor: pointer;
+                                transition: all 0.4s;
+                                
+                                &:hover {
+                                    border: 2px solid #5ECE7B;
+                                }
                             }
                         }
                     }
@@ -188,4 +199,13 @@
     font-size: 20px;
     line-height: 28px;
     color: #1D1F22;
+}
+
+.selected-color {
+    border: 2px solid #5ECE7B;
+}
+
+.selected-size {
+    background-color: black;
+    color: #FFFFFF !important;
 }

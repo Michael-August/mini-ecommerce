@@ -1,4 +1,10 @@
 .nav-bar {
+    width: 80%;
+    position: fixed;
+    top: 0;
+    background: #FFF;
+    z-index: 150;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,6 +18,21 @@
         li {
             margin-right: 32px;
             cursor: pointer;
+            position: relative;
+
+            &:hover {
+                color: #5ECE7B;
+            }
+
+            &:hover::after {
+                content: '';
+                position: absolute;
+                bottom: -30px;
+                left: -10px;
+                width: 150%;
+                height: 2px;
+                background: #5ECE7B;
+            }
         }
     }
 
@@ -46,5 +67,20 @@
                 font-size: 14px;
             }
         }
+    }
+}
+
+.active {
+    position: relative;
+    color: #5ECE7B;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: -10px;
+        width: 150%;
+        height: 2px;
+        background: #5ECE7B;
     }
 }

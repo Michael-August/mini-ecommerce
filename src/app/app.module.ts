@@ -8,6 +8,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { CartOverlayComponent } from './components/cart-overlay/cart-overlay.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
     ProductComponent,
     ProductDetailComponent,
     CartComponent,
-    ProductListComponent
+    ProductListComponent,
+    CartOverlayComponent
   ],
   imports: [
     BrowserModule,

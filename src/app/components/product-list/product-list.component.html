@@ -7,3 +7,5 @@
         <app-product [products]="products" (emitAction)="takeAction($event)"></app-product>
     </div>
 </div>
+
+<app-cart-overlay *ngIf="cartIsClicked == true"></app-cart-overlay>

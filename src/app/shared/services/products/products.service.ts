@@ -10,8 +10,63 @@ import { IProduct } from 'src/app/models/product.model';
 export class ProductsService {
 
   cartItems$: BehaviorSubject<number> = new BehaviorSubject(0)
-  itemInCart$: Subject<ICart[]> = new Subject()
-  cart: ICart[] = []
+
+  cartClicked$: Subject<boolean> = new Subject()
+
+  cart: ICart[] = [
+    // {
+    //     id: 1,
+    //     img: 'assets/images/Product A.png',
+    //     name: 'Sweat Top',
+    //     sizes: ['XS', 'S', 'M', 'L'],
+    //     price: 50.00,
+    //     colors: ['gray', 'black', 'green'],
+    //     description: "Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+    //     thumbnails: [
+    //         'assets/images/Product A.png',
+    //         'assets/images/Product A.png',
+    //         'assets/images/Product A.png',
+    //     ],
+    //     selectedColor: 'Black',
+    //     selectedSize: 'S',
+    //     quantity: 2
+    // },
+    // {
+    //     id: 1,
+    //     img: 'assets/images/Product A.png',
+    //     name: 'Sweat Top',
+    //     sizes: ['XS', 'S', 'M', 'L'],
+    //     price: 50.00,
+    //     colors: ['gray', 'black', 'green'],
+    //     description: "Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+    //     thumbnails: [
+    //         'assets/images/Product A.png',
+    //         'assets/images/Product A.png',
+    //         'assets/images/Product A.png',
+    //     ],
+    //     selectedColor: 'Black',
+    //     selectedSize: 'S',
+    //     quantity: 2
+    // },
+    // {
+    //     id: 1,
+    //     img: 'assets/images/Product A.png',
+    //     name: 'Sweat Top',
+    //     sizes: ['XS', 'S', 'M', 'L'],
+    //     price: 50.00,
+    //     colors: ['gray', 'black', 'green'],
+    //     description: "Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+    //     thumbnails: [
+    //         'assets/images/Product A.png',
+    //         'assets/images/Product A.png',
+    //         'assets/images/Product A.png',
+    //     ],
+    //     selectedColor: 'Black',
+    //     selectedSize: 'S',
+    //     quantity: 2
+    // },
+    
+  ]
 
   constructor() { }
 
@@ -32,7 +87,6 @@ export class ProductsService {
 
     this.cart = [product, ...this.cart]
     console.log(this.cart)
-    this.itemInCart$.next(this.cart)
     this.cartItems$.next(this.cart.length)
     return this.cart
     

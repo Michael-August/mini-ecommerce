@@ -22,14 +22,14 @@
                             <div class="size">
                                 <span class="title">SIZE:</span>
                                 <div class="sizes">
-                                    <span class="size-" *ngFor="let size of product?.sizes">{{size}}</span>
+                                    <span class="size-" (click)="selectSize(size)" [ngClass]="product.selectedSize == size ? 'selected-size' : 'size-'" *ngFor="let size of product?.sizes">{{size}}</span>
                                 </div>
                             </div>
 
                             <div class="color">
                                 <span class="title">Color:</span>
                                 <div class="colors" >
-                                    <div *ngFor="let color of product?.colors" class="color-" [ngStyle]="{'background': color}"></div>
+                                    <div [ngClass]="product.selectedColor == color ? 'selected-color' : 'color-'" (click)="selectColor(color)" *ngFor="let color of product?.colors" class="color-" [ngStyle]="{'background': color}"></div>
                                 </div>
                             </div>
 
@@ -48,3 +48,5 @@
         </div>
     </div>
 </div>
+
+<app-cart-overlay *ngIf="cartIsClicked"></app-cart-overlay>

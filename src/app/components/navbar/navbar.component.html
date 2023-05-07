@@ -1,9 +1,9 @@
 <div class="nav-bar">
     <div class="links">
         <ul class="link-items">
-            <li class="link">WOMEN</li>
-            <li class="link">MEN</li>
-            <li class="link">KIDS</li>
+            <li class="link" routerLink="/products" (click)="switchTab('women')" [ngClass]="tabState.tabName == 'women' ? 'active' : 'link'">WOMEN</li>
+            <li class="link" routerLink="/products" (click)="switchTab('men')" [ngClass]="tabState.tabName == 'men' ? 'active' : 'link'">MEN</li>
+            <li class="link" routerLink="/products" (click)="switchTab('kids')" [ngClass]="tabState.tabName == 'kids' ? 'active' : 'link'">KIDS</li>
         </ul>
     </div>
 
@@ -23,7 +23,7 @@
                 <a class="dropdown-item" href="#">&yen; JPY</a>
             </div>
         </div>
-        <div class="cart" routerLink="/cart">
+        <div class="cart" (click)="tellCartIsClicked()">
             <img src="assets/icons/cart.png" alt="">
             <span class="badge badge-dark" *ngIf="cartCount > 0">{{cartCount}}</span>
         </div>

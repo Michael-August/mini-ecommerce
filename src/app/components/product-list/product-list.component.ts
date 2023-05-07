@@ -15,9 +15,12 @@ export class ProductListComponent implements OnInit {
 
   products!: IProduct[]
 
+  cartIsClicked: boolean = false
+
   ngOnInit(): void {
     this.getProducts()
-    console.log(this.products)
+
+    this.productSrv.cartClicked$.asObservable().subscribe(res => this.cartIsClicked = res)
   }
 
   getProducts() {

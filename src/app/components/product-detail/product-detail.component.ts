@@ -16,10 +16,14 @@ export class ProductDetailComponent implements OnInit {
   productId: any
   product!: any
 
+  cartIsClicked: boolean = false
+
   ngOnInit(): void {
     this.productId = this.activeRoute.snapshot.paramMap.get('id')
 
     this.getProduct(this.productId)
+
+    this.productSrv.cartClicked$.asObservable().subscribe(res => this.cartIsClicked = res)
   }
 
   getProduct(productId: number) {
@@ -27,8 +31,16 @@ export class ProductDetailComponent implements OnInit {
     console.log(this.product)
   }
 
+  selectSize(size: string) {
+    this.product.selectedSize = size
+  }
+
+  selectColor(color: string) {
+    this.product.selectedColor = color
+  }
+
   addToCart(product: ICart) {
-    let cartItem: ICart = { ...product, quantity: 1, selectedColor: 'black', selectedSize: 'S' }
+    let cartItem: ICart = { ...product, quantity: 1 }
     this.productSrv.addToCart(cartItem)
     this.productSrv.cartItems$.asObservable().subscribe(res => console.log(res))
   }
