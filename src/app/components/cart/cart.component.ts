@@ -19,6 +19,8 @@ export class CartComponent implements OnInit {
 
   cartIsClicked: boolean = false
 
+  ref = `${Math.ceil(Math.random() * 10e10)}`
+
   ngOnInit(): void {
     this.getCartItems()
 
@@ -37,6 +39,20 @@ export class CartComponent implements OnInit {
 
       this.tax = 0.21 * this.total
     })
+  }
+
+  paymentInit() {
+    console.log('Payment Initialized')
+  }
+
+  paymentDone(ref: any) {
+    console.log('Payment Successful', ref)
+    this.cartItems = []
+    alert('Payment successful')
+  }
+
+  paymentCanceled() {
+    console.log('Payment Failed')
   }
 
   selectSize(size: string, product: ICart) {

@@ -77,7 +77,17 @@
                 <span class="summ-value">${{total}}</span>
             </div>
 
-            <button class="btn">ORDER</button>
+            <button 
+                angular4-paystack
+                [amount]="total * 100 * 700"
+                [email]="'chibuikeonwugharam@gmail.com'"
+                [ref]="ref"
+                (paymentInit)="paymentInit()"
+                (close)="paymentCanceled()"
+                (callback)="paymentDone($event)"
+                class="btn">
+                ORDER
+            </button>
         </div>
     </div>
 </div>
