@@ -14,40 +14,40 @@ export class ProductsService {
   cartClicked$: Subject<boolean> = new Subject()
 
   cart: ICart[] = [
-    // {
-    //     id: 1,
-    //     img: 'assets/images/Product A.png',
-    //     name: 'Sweat Top',
-    //     sizes: ['XS', 'S', 'M', 'L'],
-    //     price: 50.00,
-    //     colors: ['gray', 'black', 'green'],
-    //     description: "Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
-    //     thumbnails: [
-    //         'assets/images/Product A.png',
-    //         'assets/images/Product A.png',
-    //         'assets/images/Product A.png',
-    //     ],
-    //     selectedColor: 'Black',
-    //     selectedSize: 'S',
-    //     quantity: 2
-    // },
-    // {
-    //     id: 1,
-    //     img: 'assets/images/Product A.png',
-    //     name: 'Sweat Top',
-    //     sizes: ['XS', 'S', 'M', 'L'],
-    //     price: 50.00,
-    //     colors: ['gray', 'black', 'green'],
-    //     description: "Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
-    //     thumbnails: [
-    //         'assets/images/Product A.png',
-    //         'assets/images/Product A.png',
-    //         'assets/images/Product A.png',
-    //     ],
-    //     selectedColor: 'Black',
-    //     selectedSize: 'S',
-    //     quantity: 2
-    // },
+    {
+        id: 1,
+        img: 'assets/images/Product A.png',
+        name: 'Sweat Top',
+        sizes: ['XS', 'S', 'M', 'L'],
+        price: 50.00,
+        colors: ['gray', 'black', 'green'],
+        description: "Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        thumbnails: [
+            'assets/images/Product A.png',
+            'assets/images/Product A.png',
+            'assets/images/Product A.png',
+        ],
+        selectedColor: 'Black',
+        selectedSize: 'S',
+        quantity: 2
+    },
+    {
+        id: 1,
+        img: 'assets/images/Product A.png',
+        name: 'Sweat Top',
+        sizes: ['XS', 'S', 'M', 'L'],
+        price: 50.00,
+        colors: ['gray', 'black', 'green'],
+        description: "Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+        thumbnails: [
+            'assets/images/Product A.png',
+            'assets/images/Product A.png',
+            'assets/images/Product A.png',
+        ],
+        selectedColor: 'Black',
+        selectedSize: 'S',
+        quantity: 2
+    },
     // {
     //     id: 1,
     //     img: 'assets/images/Product A.png',

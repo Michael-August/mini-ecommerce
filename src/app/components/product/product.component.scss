@@ -57,3 +57,21 @@
         }
     }
 }
+
+@media (min-width: 360px) and (max-width: 920px) {
+    .col-md-4 {
+        padding: 16px;
+        margin-bottom: 0px;
+        width: 100%;
+        position: relative;
+
+        .product {
+            cursor: pointer;
+    
+            .product-img {
+                height: 100%;
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

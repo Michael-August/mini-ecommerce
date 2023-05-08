@@ -209,3 +209,53 @@
     background-color: black;
     color: #FFFFFF !important;
 }
+
+@media (min-width: 360px) and (max-width: 920px) { 
+    .content {
+        margin-top: 100px;
+
+        .main-title {
+            margin-bottom: 80px;
+    
+            h1 {
+                font-size: 32px;
+            }
+        }
+
+        .cart-list {
+            width: 100%;
+
+            .cart-item {
+
+                margin-bottom: 24px;
+
+                .col-md-6 {
+                
+                    .details {
+                        .name {
+                            font-size: 24px;
+                            margin-bottom: 16px;
+                        }
+
+                        .size {
+                            gap: 8px;
+                            margin-bottom: 20px;
+
+                            .size- {
+                                font-size: 12px;
+                                padding: 10px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .title {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}
